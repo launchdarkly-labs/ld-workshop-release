@@ -1,0 +1,22 @@
+version: "3"
+containers:
+- name: launchdarkly
+  image: gcr.io/instruqt/virtual-browser:prod
+  ports:
+  - 9000
+  environment:
+    url: https://i3vcudz5ncoet6xkoaqxnos7mu0sdcpz.lambda-url.us-east-2.on.aws/?sandboxId=${_SANDBOX_ID}
+  memory: 4096
+  resources:
+    memory: 4096
+virtualmachines:
+- name: workstation
+  image: instruqt-launchdarkly/release-workshop-3
+  shell: /bin/bash
+  machine_type: n1-standard-1
+  memory: 4096
+  cpus: 1
+secrets:
+- name: LAUNCHDARKLY_ACCESS_TOKEN
+- name: AWS_SECRET_ACCESS_KEY
+- name: AWS_ACCESS_KEY_ID
