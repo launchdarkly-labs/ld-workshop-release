@@ -30,18 +30,20 @@ lab_config:
   default_layout_sidebar_size: 0
 ---
 
-# Lab 2
-
-# Dark-Launching our Feature
+# Lab 2: Dark-Launching our Feature
 
 Now that we've successfully created our flag, we are ready to use that flag in our code to launch our new feature. In order to release a feature with LaunchDarkly there are two things we need to do:
 
 1. Obtain the flag's state from LaunchDarkly.
 1. Determine what code should run based on that flag's state.
 
-# Edit the Code
+## Edit the Code
 
 The next step is to update our code to make use of our new flag.
+
+---
+
+### Instructions
 
 1. Open the [Code Editor](#tab-2), and locate the `/src/pages/index.tsx` file
 2. Replace line 12 with the following code. This allows the application to start receiving values for our feature flag.
@@ -62,7 +64,13 @@ const {releaseUpdatedStorefront} = useFlags();
 
 Switch to the [Toggle Outfitters](#tab-1) tab, and you should see no change on our page. Since we haven't turned the flag on, our original preview page is being shown. However, our new code is in place and ready for action!
 
-# Flags in Action
+## Flags in Action
+
+Now let's see the flag in action by turning it on in LaunchDarkly.
+
+---
+
+### Instructions
 
 1. Switch to the [LaunchDarkly](#tab-0) tab.
 1. Click the On/Off toggle to turn the flag **On**.
@@ -70,7 +78,11 @@ Switch to the [Toggle Outfitters](#tab-1) tab, and you should see no change on o
 
 Switch to the [Toggle Outfitters](#tab-1) tab and now you should see our new brand new online store!
 
-Unfortunately, this code hasn't been tested by our developers, so for now, let's go ahead and turn this flag off for now.
+Unfortunately, this code hasn't been tested by our developers, so for now, let's go ahead and turn this flag off.
+
+---
+
+### Instructions
 
 1. Switch to the [LaunchDarkly](#tab-0) tab.
 1. Click the On/Off toggle to turn the flag **Off**.
