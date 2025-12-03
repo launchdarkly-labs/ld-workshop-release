@@ -31,13 +31,17 @@ lab_config:
   default_layout_sidebar_size: 0
 ---
 
-# Lab 3
-
-# Create a Segment
+# Lab 3: Controlling Risk with Release Targeting
 
 A *segment* is a collection of users, devices, or any other group that share some sort of common attribute. By creating a segment, we can provide targeted access to specific features. In our previous challenge, we learned how to turn on and off features in a general way. Now let's reduce our target audience to just our developers.
 
-To get started, switch to the [LaunchDarkly tab](#tab-0), and do the following:
+## Create a Segment
+
+To get started, switch to the [LaunchDarkly tab](#tab-0), and create a new segment.
+
+---
+
+### Instructions
 
 1. Click **Segments** in the left navigation menu.
 2. Click the **Create segment** button in the upper, right-hand corner.
@@ -52,6 +56,10 @@ Now let's add a rule to make this segment meaningful.
 
 ![Example Segment Rule](https://play.instruqt.com/assets/tracks/apk1xxhtw40m/286d54aac63acdb5f28e7ff8fe0942dc/assets/rule-1.png)
 
+---
+
+### Instructions
+
 1. For **Rule 1**, select the following values:
    1. **Context kind**: user
    1. **Attribute**: name
@@ -65,9 +73,13 @@ Now let's add a rule to make this segment meaningful.
 
 The list of **Values** is comprised of arbitrary usernames created for this exercise. In a real environment, you might use different attributes to identify groups of users in a more dynamic way. The usernames here are *case-sensitive*, so make sure you take that into consideration when you're creating targeting rules.
 
-# Next: Test in Production
+## Test in Production
 
 Now let's update our feature flag from Challenge 1 to use our new segment.
+
+---
+
+### Instructions
 
 1. Click **Flags** in the left navigation menu.
 1. Click **Release Updated Storefront**.
@@ -81,7 +93,11 @@ Now let's update our feature flag from Challenge 1 to use our new segment.
 1. Click the On/Off toggle at the top left to turn the flag **On**.
 1. Click **Review and save**, then **Save changes**.
 
-Go ahead and navigate back to our [Toggle Outfitters](#tab-1) tab. Even though the flag is on, nothing looks different. That's because a developer isn't logged in!
+Navigate back to our [Toggle Outfitters](#tab-1) tab. Even though the flag is on, nothing looks different. That's because a developer isn't logged in!
+
+---
+
+### Instructions
 
 1. Click **Login** located in the upper, right-hand corner of the Toggle Outfitters site.
 1. Enter **ron**, **leslie**, **april**, or **andy** for the username.
